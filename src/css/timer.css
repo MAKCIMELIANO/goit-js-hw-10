@@ -1,0 +1,143 @@
+.timer-button__disabled {
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+
+    color: #989898;
+
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.64px;
+
+    border-radius: 8px;
+    background: #CFCFCF;
+    border: none;
+}
+
+.timer-button__normal {
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFF;
+
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.64px;
+
+    border-radius: 8px;
+    background: #4E75FF;
+    border: none;
+}
+
+.timer-button__normal:hover {
+    cursor: pointer;
+    background: #6C8CFF;
+}
+
+.timer-input__disabled {
+    margin-top: 50px;
+    width: 272px;
+    height: 40px;
+    padding: 8px 16px;
+
+    color: #808080;
+
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.64px;
+
+    border-radius: 4px;
+    border: 1px solid #808080;
+}
+
+.timer-input__normal {
+    margin-top: 50px;
+    width: 272px;
+    height: 40px;
+    padding: 8px 16px;
+
+    color: #2E2F42;
+
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.64px;
+
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #808080;
+}
+
+.timer-input__normal:active {
+    color: #000;
+
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.64px;
+
+    border-color: #4E75FF;
+}
+
+.timer {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+
+    margin-top: 32px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.value {
+    display: flex;
+    color: #2E2F42;
+
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    /* 120% */
+    letter-spacing: 1.6px;
+}
+
+.label {
+    display: flex;
+    color: #2E2F42;
+
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+
+    text-transform: uppercase;
+}
