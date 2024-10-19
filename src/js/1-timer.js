@@ -64,6 +64,10 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
+function addLeadingZero(value) {
+  return value.toString().padStart(2, '0');
+}
+
 refs.btnStart.addEventListener('click', () => {
   if (userSelectedDate) {
     const nowDate = new Date();
@@ -80,16 +84,23 @@ refs.btnStart.addEventListener('click', () => {
       const remainingTime = diff - (new Date() - nowDate);
       const timeParts = convertMs(remainingTime);
 
-      refs.days.textContent = timeParts.days;
-      refs.hours.textContent = timeParts.hours;
-      refs.minutes.textContent = timeParts.minutes;
-      refs.seconds.textContent = timeParts.seconds;
+      const formattedTimeParts = Object.fromEntries(
+        Object.entries(timeParts).map(([key, value]) => [
+          key,
+          addLeadingZero(value),
+        ])
+      );
+
+      refs.days.textContent = formattedTimeParts.days;
+      refs.hours.textContent = formattedTimeParts.hours;
+      refs.minutes.textContent = formattedTimeParts.minutes;
+      refs.seconds.textContent = formattedTimeParts.seconds;
 
       if (remainingTime <= 0) {
-        refs.days.textContent = '0';
-        refs.hours.textContent = '0';
-        refs.minutes.textContent = '0';
-        refs.seconds.textContent = '0';
+        refs.days.textContent = addLeadingZero(0);
+        refs.hours.textContent = addLeadingZero(0);
+        refs.minutes.textContent = addLeadingZero(0);
+        refs.seconds.textContent = addLeadingZero(0);
         clearInterval(timerInterval);
         refs.btnStart.disabled = false;
         refs.inputTimer.disabled = false;
